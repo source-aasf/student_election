@@ -181,7 +181,7 @@ if(!isset($_SESSION['login-user']) && $_SESSION['role'] != 'admin'){
 	$election_query = mysql_query("SELECT * FROM `elections` WHERE `active` = 1 AND `members_added` = 0");
 ?>
 	<div>
-		<form role="form" method = "POST" action="">
+		<form role="form" method = "POST" action="" onsubmit="return addNomineesCheck()">
 		
 		  <div class="form-group">
 		    <label for="election">Election</label>
@@ -198,7 +198,7 @@ if(!isset($_SESSION['login-user']) && $_SESSION['role'] != 'admin'){
 
 		  <div class="form-group">
 		    <label for="user1">User 1</label>
-		     <select class="form-control" name="user1">
+		     <select class="form-control" name="user1" id="user1">
 		    <?php
 		    	while($iter = mysql_fetch_assoc($user_query)){
 		    		 $user_id = $iter['user_id'];
@@ -212,7 +212,7 @@ if(!isset($_SESSION['login-user']) && $_SESSION['role'] != 'admin'){
 
 		  <div class="form-group">
 		    <label for="user2">User 2</label>
-		     <select class="form-control" name="user2">
+		     <select class="form-control" name="user2" id="user2">
 		    <?php
 		    	while($iter = mysql_fetch_assoc($user_query)){
 		    		 $user_id = $iter['user_id'];
@@ -226,7 +226,7 @@ if(!isset($_SESSION['login-user']) && $_SESSION['role'] != 'admin'){
 
 		  <div class="form-group">
 		    <label for="user3">User 3</label>
-		     <select class="form-control" name="user3">
+		     <select class="form-control" name="user3" id="user3">
 		    <?php
 		    	while($iter = mysql_fetch_assoc($user_query)){
 		    		 $user_id = $iter['user_id'];
@@ -240,7 +240,7 @@ if(!isset($_SESSION['login-user']) && $_SESSION['role'] != 'admin'){
 
 		  <div class="form-group">
 		    <label for="user4">User 4</label>
-		     <select class="form-control" name="user4">
+		     <select class="form-control" name="user4" id="user4">
 		    <?php
 		    	while($iter = mysql_fetch_assoc($user_query)){
 		    		 $user_id = $iter['user_id'];
