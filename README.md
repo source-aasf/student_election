@@ -5,7 +5,7 @@
 To use this template, choose one of the following options to get started:
 * Fork this repository on GitHub
 
-## Bugs and Issues
+## Bugs and Issues//ythgjyg
 
 Have a bug or an issue with this template? 
 
